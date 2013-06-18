@@ -34,7 +34,6 @@
 					 action:@selector(sendTextViaComposeViewController)
 		   forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview:_sendTextBtn];
-	NSLog(@"%@",_sendTextBtn);
 	
 	
 	self.result = [[[UILabel alloc] initWithFrame:CGRectMake(20, 160, 280, 40)] autorelease];
@@ -59,6 +58,7 @@
 	_result.text = @"";
 	SLComposeViewController *currentComposeViewController = [SLComposeViewController composeViewControllerForServiceType:_tabbarController.currentSNSIndentifier];
 	[currentComposeViewController setInitialText:@"Hello social framework!"];
+	[currentComposeViewController addImage:[UIImage imageNamed:@"1.jpg"]];
 	[currentComposeViewController addURL:[NSURL URLWithString:@"http://www.baidu.com"]];
 	currentComposeViewController.completionHandler = ^(SLComposeViewControllerResult result){
 		switch (result)

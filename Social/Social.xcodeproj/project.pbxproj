@@ -20,6 +20,7 @@
 		85D3FBD4176EFDF900D98136 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D3FBD3176EFDF900D98136 /* Social.framework */; };
 		85D3FBD6176EFDFF00D98136 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D3FBD5176EFDFF00D98136 /* Accounts.framework */; };
 		85E672A3177034D50071A39A /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E672A1177034D50071A39A /* TabBarController.m */; };
+		85E672A61770530D0071A39A /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85E672A51770530D0071A39A /* 1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		85D3FBD5176EFDFF00D98136 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		85E672A0177034D50071A39A /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		85E672A1177034D50071A39A /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		85E672A51770530D0071A39A /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				85D3FBB8176EFC4600D98136 /* Social-Info.plist */,
 				85D3FBB9176EFC4600D98136 /* InfoPlist.strings */,
 				85D3FBBC176EFC4700D98136 /* main.m */,
+				85E672A51770530D0071A39A /* 1.jpg */,
 				85D3FBBE176EFC4700D98136 /* Social-Prefix.pch */,
 				85D3FBC2176EFC4700D98136 /* Default.png */,
 				85D3FBC4176EFC4700D98136 /* Default@2x.png */,
@@ -172,6 +175,7 @@
 				85D3FBC3176EFC4700D98136 /* Default.png in Resources */,
 				85D3FBC5176EFC4700D98136 /* Default@2x.png in Resources */,
 				85D3FBC7176EFC4700D98136 /* Default-568h@2x.png in Resources */,
+				85E672A61770530D0071A39A /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
