@@ -7,25 +7,32 @@
 //
 
 #import "AppDelegate.h"
-
-#import "ViewController.h"
-
 @implementation AppDelegate
 
 - (void)dealloc
 {
+
 	[_window release];
-	[_viewController release];
+	[_rootViewController release];
     [super dealloc];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
-	self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
-	self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
+	self.window = [[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds] autorelease];
+	self.rootViewController = [[[TabBarController alloc] init] autorelease];
+	ComposeViewController *composeView = [[ComposeViewController alloc] init];
+	composeView.tabBarItem = [[[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites
+																		 tag:0] autorelease];
+	composeView.tabbarController = self.rootViewController;
+	
+	
+	UIViewController	*secondController = [[UIViewController alloc] init];
+	self.rootViewController.viewControllers = @[composeView,secondController];
+	[composeView release];
+	[secondController release];
+	self.window.rootViewController = _rootViewController;
+	[self.window makeKeyAndVisible];
     return YES;
 }
 

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
+extern NSString *kSocialTypeDidChangedNotification;
+@interface TabBarController : UITabBarController
 
-@interface RootViewController : UITabBarController
+@property (copy, nonatomic) NSString *currentSNSIndentifier;
+@property (retain, nonatomic)  UISegmentedControl *SNSTypes;
 
+-(void) changeSNS:(id)sender;
 @end

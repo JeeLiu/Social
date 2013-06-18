@@ -16,8 +16,10 @@
 		85D3FBC3176EFC4700D98136 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D3FBC2176EFC4700D98136 /* Default.png */; };
 		85D3FBC5176EFC4700D98136 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D3FBC4176EFC4700D98136 /* Default@2x.png */; };
 		85D3FBC7176EFC4700D98136 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D3FBC6176EFC4700D98136 /* Default-568h@2x.png */; };
-		85D3FBCA176EFC4700D98136 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D3FBC9176EFC4700D98136 /* ViewController.m */; };
-		85D3FBCD176EFC4700D98136 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85D3FBCB176EFC4700D98136 /* ViewController.xib */; };
+		85D3FBCA176EFC4700D98136 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D3FBC9176EFC4700D98136 /* ComposeViewController.m */; };
+		85D3FBD4176EFDF900D98136 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D3FBD3176EFDF900D98136 /* Social.framework */; };
+		85D3FBD6176EFDFF00D98136 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D3FBD5176EFDFF00D98136 /* Accounts.framework */; };
+		85E672A3177034D50071A39A /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E672A1177034D50071A39A /* TabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +36,12 @@
 		85D3FBC2176EFC4700D98136 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		85D3FBC4176EFC4700D98136 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		85D3FBC6176EFC4700D98136 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		85D3FBC8176EFC4700D98136 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		85D3FBC9176EFC4700D98136 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		85D3FBCC176EFC4700D98136 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		85D3FBC8176EFC4700D98136 /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		85D3FBC9176EFC4700D98136 /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		85D3FBD3176EFDF900D98136 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		85D3FBD5176EFDFF00D98136 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		85E672A0177034D50071A39A /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		85E672A1177034D50071A39A /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D3FBD6176EFDFF00D98136 /* Accounts.framework in Frameworks */,
+				85D3FBD4176EFDF900D98136 /* Social.framework in Frameworks */,
 				85D3FBB1176EFC4600D98136 /* UIKit.framework in Frameworks */,
 				85D3FBB3176EFC4600D98136 /* Foundation.framework in Frameworks */,
 				85D3FBB5176EFC4600D98136 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +80,8 @@
 		85D3FBAF176EFC4600D98136 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85D3FBD5176EFDFF00D98136 /* Accounts.framework */,
+				85D3FBD3176EFDF900D98136 /* Social.framework */,
 				85D3FBB0176EFC4600D98136 /* UIKit.framework */,
 				85D3FBB2176EFC4600D98136 /* Foundation.framework */,
 				85D3FBB4176EFC4600D98136 /* CoreGraphics.framework */,
@@ -85,9 +94,10 @@
 			children = (
 				85D3FBBF176EFC4700D98136 /* AppDelegate.h */,
 				85D3FBC0176EFC4700D98136 /* AppDelegate.m */,
-				85D3FBC8176EFC4700D98136 /* ViewController.h */,
-				85D3FBC9176EFC4700D98136 /* ViewController.m */,
-				85D3FBCB176EFC4700D98136 /* ViewController.xib */,
+				85E672A0177034D50071A39A /* TabBarController.h */,
+				85E672A1177034D50071A39A /* TabBarController.m */,
+				85D3FBC8176EFC4700D98136 /* ComposeViewController.h */,
+				85D3FBC9176EFC4700D98136 /* ComposeViewController.m */,
 				85D3FBB7176EFC4600D98136 /* Supporting Files */,
 			);
 			path = Social;
@@ -162,7 +172,6 @@
 				85D3FBC3176EFC4700D98136 /* Default.png in Resources */,
 				85D3FBC5176EFC4700D98136 /* Default@2x.png in Resources */,
 				85D3FBC7176EFC4700D98136 /* Default-568h@2x.png in Resources */,
-				85D3FBCD176EFC4700D98136 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +184,8 @@
 			files = (
 				85D3FBBD176EFC4700D98136 /* main.m in Sources */,
 				85D3FBC1176EFC4700D98136 /* AppDelegate.m in Sources */,
-				85D3FBCA176EFC4700D98136 /* ViewController.m in Sources */,
+				85D3FBCA176EFC4700D98136 /* ComposeViewController.m in Sources */,
+				85E672A3177034D50071A39A /* TabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,14 +198,6 @@
 				85D3FBBA176EFC4600D98136 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		85D3FBCB176EFC4700D98136 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				85D3FBCC176EFC4700D98136 /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -296,6 +298,7 @@
 				85D3FBD2176EFC4700D98136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
